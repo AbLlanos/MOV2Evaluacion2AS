@@ -11,7 +11,7 @@ export default function HomeScreen({ navigation }: any) {
                 source={{ uri: "https://cdn-icons-png.flaticon.com/128/8303/8303439.png" }}
             />
 
-            <Text style={styles.subtitle}>Sistema de Registro de Estudiantes por Profesores</Text>
+            <Text style={styles.subtitle}>Sistema de Registro de Estudiantes</Text>
 
             <TouchableOpacity
                 style={styles.button}
@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         marginBottom: 10,
         color: "#333",
+        textAlign:"center",
     },
     subtitle: {
         fontSize: 18,

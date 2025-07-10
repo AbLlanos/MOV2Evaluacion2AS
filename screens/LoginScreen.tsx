@@ -30,13 +30,28 @@ export default function LoginScreen({ navigation }: any) {
 
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode)
-                console.log(errorMessage)
 
-                Alert.alert("Error", "Credenciales no válidas")
+                console.log(error.code)
 
+                switch (error.code) {
+
+                    case "auth/email-already-in-use":
+                        Alert.alert("Error", "Credenciales en uso")
+                        break;
+
+                    case "auth/invalid-email":
+                        Alert.alert("Error", "correo no validoss")
+                        break;
+
+                    case "auth/invalid-credential":
+                        Alert.alert("Error", "credenciales invalidas")
+                        break;
+
+                    default:
+                        Alert.alert("Error", "Vuelva a intentarlo")
+                        break;
+
+                }
 
             });
     }
@@ -101,6 +116,6 @@ const styles = StyleSheet.create({
         height: 200,
         borderRadius: 100,
         marginVertical: 20,
-         resizeMode: "contain",
+        resizeMode: "contain",
     }
 });

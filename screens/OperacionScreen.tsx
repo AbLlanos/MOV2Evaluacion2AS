@@ -30,7 +30,7 @@ export default function OperacionScreen() {
         }
 
         if (edadEstudiante < 18) {
-            Alert.alert("Error", "El estudiante debe ser mayor de edad")
+            Alert.alert("Error", "La edad debe ser un número válido y mayor de edadd");
             return;
         }
 
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         padding: 20,
         alignItems: "center",
-        backgroundColor:"#b6a89a"
+        backgroundColor: "#b6a89a"
     },
     title: {
         fontSize: 24,
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
     input: {
         borderWidth: 1,
         borderColor: "#ccc",
-        backgroundColor:"#efedeb",
+        backgroundColor: "#efedeb",
         padding: 10,
         marginBottom: 15,
         borderRadius: 5,
